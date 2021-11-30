@@ -9,4 +9,4 @@
 - Compile needles
 
 [GitHub](https://github.com/Apisit-Lee/wc-ui)
-[Get Started](https://apisit-lee.github.io/wc-ui/#/guide)
+[Get Started](https://apisit-lee.github.io/wc-ui/#/guide ':target=_self')
