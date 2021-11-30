@@ -1,4 +1,3 @@
 * [Home](/)
 * [Guide](/guide)
-* [Components]
-    * [portal](/portal)
+* [Components](/components/)
