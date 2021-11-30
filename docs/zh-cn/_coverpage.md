@@ -1,4 +1,4 @@
-![logo](_media/icon.svg)
+![logo](./_media/icon.svg)
 
 # wc-ui <small>1.0.0</small>
 
