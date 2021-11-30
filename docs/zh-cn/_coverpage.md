@@ -9,4 +9,4 @@
 - 无需编译
 
 [GitHub](https://github.com/Apisit-Lee/wc-ui)
-[开始上手](#guide)
+[开始上手](#/zh-cn/guide ':target=_self')
