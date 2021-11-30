@@ -15,7 +15,7 @@ export default class WcPortal extends HTMLElement {
       return null;
   }
   set portal(portal) {
-    this.setAttribute(portal);
+    this.setAttribute('portal', portal);
   }
   connectedCallback() {
     if (this.portal && this.portal!==this.parentNode) {
@@ -25,7 +25,7 @@ export default class WcPortal extends HTMLElement {
   attributeChangedCallback(name, oldValue, newValue) {
     if (name === 'portal') {
       if (oldValue) {
-        const oldPortal = document.quesySelector(oldValue);
+        const oldPortal = document.querySelector(oldValue);
         oldPortal.removeChild(this);
       }
       if (this.portal && this.portal!==this.parentNode) {
