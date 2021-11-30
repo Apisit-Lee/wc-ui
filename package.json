@@ -1,0 +1,23 @@
+{
+  "name": "wc-ui",
+  "version": "1.0.0",
+  "description": "a web component ui lib.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Apisit-Lee/wc-ui.git"
+  },
+  "keywords": [
+    "web-component",
+    "ui"
+  ],
+  "author": "Apisit-Lee",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Apisit-Lee/wc-ui/issues"
+  },
+  "homepage": "https://github.com/Apisit-Lee/wc-ui#readme"
+}
