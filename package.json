@@ -19,5 +19,10 @@
   "bugs": {
     "url": "https://github.com/Apisit-Lee/wc-ui/issues"
   },
-  "homepage": "https://github.com/Apisit-Lee/wc-ui#readme"
+  "homepage": "https://github.com/Apisit-Lee/wc-ui#readme",
+  "files": [
+	  "index.js",
+		"components",
+		"iconfont"
+	]
 }
