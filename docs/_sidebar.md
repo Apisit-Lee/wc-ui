@@ -5,3 +5,5 @@
 * Components
 
     * [portal](/portal)
+    * [icon](/icon)
+    * [icon-source](/icon-source)

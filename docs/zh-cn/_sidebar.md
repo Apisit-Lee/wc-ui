@@ -5,3 +5,4 @@
 * 组件
 
     * [portal](/zh-cn/portal)
+    * [icon](/zh-cn/icon)
