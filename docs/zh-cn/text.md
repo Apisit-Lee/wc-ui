@@ -15,3 +15,7 @@
 
 <wc-text rows="2" style="width: 100px;">This is a very long text.This is a very long text.This is a very long text.This is a very long text.This is a very long text.This is a very long text.This is a very long text.This is a very long text.This is a very long text.This is a very long text.This is a very long text.This is a very long text.This is a very long text.</wc-text>
 ```
+
+<wc-text>Hello world.</wc-text>
+
+<wc-text rows="2" style="width: 100px;">This is a very long text.This is a very long text.This is a very long text.This is a very long text.This is a very long text.This is a very long text.This is a very long text.This is a very long text.This is a very long text.This is a very long text.This is a very long text.This is a very long text.This is a very long text.</wc-text>
