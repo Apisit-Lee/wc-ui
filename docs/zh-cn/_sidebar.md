@@ -6,3 +6,4 @@
 
     * [portal](/zh-cn/portal)
     * [icon](/zh-cn/icon)
+    * [icon-source](/zh-cn/icon-source)
