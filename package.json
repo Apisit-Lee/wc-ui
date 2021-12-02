@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "a web component ui lib.",
   "main": "index.js",
+  "module": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
