@@ -7,3 +7,4 @@
     * [portal](/portal)
     * [icon](/icon)
     * [icon-source](/icon-source)
+    * [text](/text)
