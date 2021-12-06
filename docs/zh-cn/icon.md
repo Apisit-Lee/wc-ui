@@ -51,6 +51,10 @@ svg的path值。
 
 <wc-icon path="M512 625.778c-159.289 0-284.444-125.156-284.444-284.445S352.71 56.89 512 56.89s284.444 125.155 284.444 284.444S671.29 625.778 512 625.778z m0-56.89c125.156 0 227.556-102.4 227.556-227.555S637.156 113.778 512 113.778s-227.556 102.4-227.556 227.555S386.844 568.89 512 568.89z"></wc-icon>
 
+## 默认图标库
+
+我在iconfont上选择了[一个官方库](https://www.iconfont.cn/collections/detail?spm=a313x.7781069.1998910419.d9df05512&cid=33)作为默认图标库。
+
 <style>
   .icons wc-icon {border: 1px solid #dddddd;font-size: 26px;margin: 12px;padding: 45px;position: relative;}
   .icons wc-icon:after {content: attr(type);font-size: 12px;line-height: 15px;width: 100%;height: fit-content;color: #999999;position: absolute;bottom: 5px;left: 0;text-align: center;white-space: pre-wrap;word-break: break-all;}
