@@ -15,7 +15,7 @@ export default class WcIcon extends HTMLElement {
                 transition: .3s;
             }
             .icon {
-                display: block;
+                display: inline-block;
                 width: 1em;
                 height: 1em;
                 margin: auto;
