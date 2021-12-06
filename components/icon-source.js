@@ -37,11 +37,18 @@ export default class WcIconSource extends HTMLElement {
     }
 
     notifyIconSourceLoaded(name, isLoaded) {
-        (document.querySelectorAll(`wc-icon[source=${name}]`)).forEach(icon => {
+        // normal icons
+        let planIcons = document.querySelectorAll(`wc-icon[source=${name}]`) || [];
+
+        // icons in button shadow root
+        let buttons = document.getElementsByTagName('wc-button');
+        let buttonIcons = Array.from(buttons).map(btn => btn.shadowRoot.getElementById('icon')) || [];
+
+        [...planIcons, ...buttonIcons].forEach(icon => {
             if (isLoaded) {
-                icon.setAttribute('issourceloaded', 'true');
+                icon && icon.setAttribute('issourceloaded', 'true');
             } else {
-                icon.setAttribute('issourceloaded', 'false');
+                icon && icon.setAttribute('issourceloaded', 'false');
             }
         });
     }
