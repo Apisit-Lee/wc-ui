@@ -8,3 +8,4 @@
     * [icon](/zh-cn/icon)
     * [icon-source](/zh-cn/icon-source)
     * [text](/zh-cn/text)
+    * [button](/zh-cn/button)

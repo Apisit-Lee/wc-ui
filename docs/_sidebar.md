@@ -8,3 +8,4 @@
     * [icon](/icon)
     * [icon-source](/icon-source)
     * [text](/text)
+    * [button](/button)
