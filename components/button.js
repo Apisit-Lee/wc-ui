@@ -40,7 +40,7 @@ export default class WcButton extends HTMLElement {
             padding: 3px;
             outline-color: transparent;
             overflow: hidden;
-            font-size: 0;
+            font-size: 0!important;
 
             border: 1px solid var(--btn-border-color, var(--btn-background-color, #1792ff1a));
             background: var(--btn-background-color, #1792ff1a);
