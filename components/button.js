@@ -286,7 +286,7 @@ export class WcButtonGroup extends HTMLElement {
           :host {
             display: inline-flex;
             gap: 0;
-            font-size: 0;
+            font-size: 0!important;
           }
 
           ::slotted(wc-button) {
