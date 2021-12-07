@@ -129,3 +129,15 @@ When `disalbed` attribute is set, the button turns to gray, and all pointer even
     <wc-button icon="all" type="outlined" tabindex="0" theme="error">outlined</wc-button>
     <wc-button icon="all" type="text" tabindex="0" theme="error">text</wc-button>
   </section>
+
+  <section>
+    <h3>6. Group: </h3>
+    <wc-button-group>
+      <wc-button icon="all" tabindex="0" theme="error">default</wc-button>
+      <wc-button>First</wc-button>
+      <wc-button>Second</wc-button>
+      <wc-button>Third</wc-button>
+      <wc-button type="outlined" disabled>outlined button</wc-button>
+      <wc-button icon="all" type="outlined" tabindex="0" theme="success">outlined</wc-button>
+    </wc-button-group>
+  </section>

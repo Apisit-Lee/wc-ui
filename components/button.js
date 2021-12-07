@@ -35,39 +35,51 @@ export default class WcButton extends HTMLElement {
             margin: 8px 12px;
             height: auto;
             display: inline-block;
+            vertical-align: middle;
             border-radius: 40px;
             padding: 3px;
             outline-color: transparent;
-          }
-          #btn {
-            border: 1px solid var(--btn-border-color, transparent);
+            overflow: hidden;
+            font-size: 14px;
+
+            border: 1px solid var(--btn-border-color, var(--btn-background-color, #1792ff1a));
             background: var(--btn-background-color, #1792ff1a);
             box-shadow: var(--btn-shadow, 0 2px 5px rgba(0, 0, 0, .3));
             color: var(--btn-on-background-color, #1792ff);
             outline: 0;
             line-height: var(--btn-line-height, 32px);
             padding: var(--btn-padding, 0 24px);
-            border-radius: 40px;
             position: relative;
             overflow: hidden;
           }
-          :host([type=filled]) #btn {
+          #btn {
+            width: 100%;
+            height: 100%;
+            border: 0;
+            outline: 0;
+            background: transparent;
+            color: inherit;
+            pointer-events: none;
+          }
+          :host([type=filled]) {
             --btn-background-color: var(--btn-primary-color, #1792ff);
+            --btn-border-color: var(--btn-primary-color, #1792ff);
             color: #ffffff;
             --btn-shadow: none;
             --btn-background-hover-color: #ffffff;
           }
-          :host([type=tonal]) #btn {
+          :host([type=tonal]) {
             --btn-background-color: var(--btn-primary-color-40, #1792ff66);
+            --btn-border-color: var(--btn-primary-color-40, #1792ff66);
             --btn-on-background-color: var(--btn-primary-color-90, #105797);
             --btn-shadow: none;
           }
-          :host([type=outlined]) #btn {
+          :host([type=outlined]) {
             background: transparent;
             --btn-border-color: var(--btn-primary-color-90, #105797);
             --btn-shadow: none;
           }
-          :host([type=text]) #btn {
+          :host([type=text]) {
             background: transparent;
             --btn-shadow: none;
           }
@@ -112,24 +124,18 @@ export default class WcButton extends HTMLElement {
           :host([block]) {
             display: block;
           }
-          :host([block]) #btn {
-            display: block;
-            width: 100%;
-          }
-          :host([round]) #btn {
-            display: block;
+          :host([round]){
             width: var(--btn-line-height, 32px);
             height: var(--btn-line-height, 32px);
-            border-radius: 50%;
             padding: 0;
           }
           :host([round]) #icon {
             margin: 0;
           }
-          :host(:not([type=text]):hover) #btn {
+          :host(:not([type=text]):hover) {
             --btn-shadow: 0 2px 5px rgba(0, 0, 0, .3);
           }
-          :host(:hover) #btn:after {
+          :host(:hover):after {
             content: '';
             display: block;
             position: absolute;
@@ -143,7 +149,7 @@ export default class WcButton extends HTMLElement {
           :host(:focus) {
             outline-color: var(--btn-focus-outline-color, #105797);
           }
-          :host(:active) #btn:after {
+          :host(:active):after {
             content: '';
             display: block;
             position: absolute;
@@ -158,8 +164,6 @@ export default class WcButton extends HTMLElement {
             opacity: 0.38;
             outline-color: transparent;
             pointer-events: none;
-          }
-          :host([disabled]) #btn {
             cursor: not-allowed;
           }
           #icon {
@@ -271,4 +275,43 @@ export default class WcButton extends HTMLElement {
 }
 if (!customElements.get('wc-button')) {
     customElements.define('wc-button', WcButton);
+}
+
+export default class WcButtonGroup extends HTMLElement {
+    constructor() {
+        super();
+        const shadowRoot = this.attachShadow({ mode: 'open' });
+        shadowRoot.innerHTML = `
+        <style>
+          :host {
+            display: inline-flex;
+            gap: 0;
+            font-size: 0;
+          }
+
+          ::slotted(wc-button) {
+            margin: 0!important;
+            box-shadow: none!important;
+          }
+          ::slotted(wc-button:not(:first-of-type):not(:last-of-type)) {
+            border-radius: 0;
+          }
+          ::slotted(wc-button:first-of-type) {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+          }
+          ::slotted(wc-button:last-of-type) {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+          }
+          ::slotted(wc-button[type=outlined]:not(:last-of-type)) {
+            border-right: 0;
+          }
+        </style>
+        <div id="button-group"><slot></slot></div>
+      `;
+    }
+}
+if (!customElements.get('wc-button-group')) {
+    customElements.define('wc-button-group', WcButtonGroup);
 }
