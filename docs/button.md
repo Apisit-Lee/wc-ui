@@ -99,7 +99,7 @@ When `disalbed` attribute is set, the button turns to gray, and all pointer even
     <wc-button icon="all" type="filled" icon="explore" tabindex="0" round></wc-button>
     <wc-button icon="all" type="tonal" tabindex="0" round></wc-button>
     <wc-button icon="all" type="outlined" tabindex="0" round></wc-button>
-    <wc-button icon="all" type="text" tabindex="0"></wc-button>
+    <wc-button icon="all" type="text" tabindex="0" round></wc-button>
   </section>
 
   <section>

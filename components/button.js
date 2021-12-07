@@ -103,12 +103,12 @@ export default class WcButton extends HTMLElement {
           }
           :host([size=x-small]) {
             --btn-line-height: 24px;
-            --btn-padding: 0 14px;
+            --btn-padding: 0 8px;
             --btn-spacing: 4px;
           }
           :host([size=small]) {
             --btn-line-height: 28px;
-            --btn-padding: 0 16px;
+            --btn-padding: 0 12px;
             --btn-spacing: 5px;
           }
           :host([size=large]) {
@@ -128,6 +128,7 @@ export default class WcButton extends HTMLElement {
             width: var(--btn-line-height, 32px);
             height: var(--btn-line-height, 32px);
             padding: 0;
+            --btn-padding: 0;
           }
           :host([round]) #icon {
             margin: 0;
