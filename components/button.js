@@ -33,7 +33,7 @@ export default class WcButton extends HTMLElement {
             --btn-spacing: 6px;
 
             margin: 8px 12px;
-            height: auto;
+            height: var(--btn-line-height, 32px);
             display: inline-block;
             vertical-align: middle;
             border-radius: 40px;
