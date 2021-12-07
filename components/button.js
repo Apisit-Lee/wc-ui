@@ -269,6 +269,6 @@ export default class WcButton extends HTMLElement {
         }
     }
 }
-if (!customElements.get(WcButton)) {
+if (!customElements.get('wc-button')) {
     customElements.define('wc-button', WcButton);
 }
