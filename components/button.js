@@ -277,7 +277,7 @@ if (!customElements.get('wc-button')) {
     customElements.define('wc-button', WcButton);
 }
 
-export default class WcButtonGroup extends HTMLElement {
+export class WcButtonGroup extends HTMLElement {
     constructor() {
         super();
         const shadowRoot = this.attachShadow({ mode: 'open' });
