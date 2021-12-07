@@ -46,7 +46,6 @@ export default class WcButton extends HTMLElement {
             background: var(--btn-background-color, #1792ff1a);
             box-shadow: var(--btn-shadow, 0 2px 5px rgba(0, 0, 0, .3));
             color: var(--btn-on-background-color, #1792ff);
-            outline: 0;
             line-height: var(--btn-line-height, 32px);
             padding: var(--btn-padding, 0 24px);
             position: relative;
@@ -244,6 +243,12 @@ export default class WcButton extends HTMLElement {
             this.removeAttribute('disabeld');
         } else {
             this.setAttribute('disabled', '');
+        }
+    }
+
+    focus() {
+        if (this.btnEl) {
+            this.btnEl.focus();
         }
     }
 
