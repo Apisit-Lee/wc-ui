@@ -95,14 +95,6 @@ If `footer` is **true**, the footer part will be visible, or it will be invisibl
 <wc-button onclick="showDialog3()">show dialog by function</wc-button>
 ```
 
-<style>
-    [theme=kris] {
-        --primary-color: #7139f5;
-        --primary-color-10: #7139f51a;
-        --primary-color-40: #7139f566;
-        --primary-color-90: #45209b;
-    }
-</style>
 <div class="main">
     <wc-button onclick="showDialog1()">show dialog 1</wc-button>
     <wc-dialog id="dialog" portal="body:after" fullscreen title="<wc-icon type='all' style='color: #1792ff;'></wc-icon> GOOD PICS" style="width: 500px;">
@@ -137,47 +129,3 @@ If `footer` is **true**, the footer part will be visible, or it will be invisibl
     </wc-dialog>
 </div>
 <wc-button onclick="showDialog3()">show dialog by function</wc-button>
-<script>
-    function showDialog1() {
-    const dialog = document.getElementById('dialog');
-    if (dialog) {
-      dialog.visible = true;
-    }
-  }
-  function onClick(btn) {
-    Array.from(btn.parentNode.children).forEach(element => {
-      element.type = '';
-    });
-    btn.type = 'filled';
-    if (btn.dataset.target) {
-      const dialog = document.getElementById('dialog');
-      if (dialog) {
-        dialog.portal = btn.dataset.target;
-      }
-    }
-  }
-  function showDialog2() {
-    const dialog = document.getElementById('dialog2');
-    if (dialog) {
-      dialog.canceltext = 'Cancel';
-      dialog.oktext = null;
-      dialog.visible = true;
-    }
-  }
-  function onClick2(btn) {
-    Array.from(btn.parentNode.children).forEach(element => {
-      element.type = '';
-    });
-    btn.type = 'filled';
-    if (btn.dataset.target) {
-      const dialog = document.getElementById('dialog2');
-      if (dialog) {
-        dialog.portal = btn.dataset.target;
-      }
-    }
-  }
-
-  function showDialog3() {
-      WcDialog.error('我是通过WcDialog.error调用的。');
-    }
-</script>

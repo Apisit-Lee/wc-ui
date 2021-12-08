@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Document</title>
@@ -9,9 +10,21 @@
   <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css"> -->
   <!-- Theme: Simple (latest v0.x.x) -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">
-  <style>.app-name img {max-height: 50px;}</style>
+  <style>
+    .app-name img {
+      max-height: 50px;
+    }
+
+    [theme=kris] {
+      --primary-color: #7139f5;
+      --primary-color-10: #7139f51a;
+      --primary-color-40: #7139f566;
+      --primary-color-90: #45209b;
+    }
+  </style>
   <wc-icon-source src="../iconfont/iconfont.svg"></wc-icon-source>
 </head>
+
 <body>
   <div id="app"></div>
   <script>
@@ -24,7 +37,7 @@
       subMaxLevel: 2,
       auto2top: true,
       themeable: {
-        readyTransition : true, // default
+        readyTransition: true, // default
         responsiveTables: true  // default
       },
       pagination: {
@@ -43,5 +56,50 @@
   <script type="module">
     import '../js/index.js';
   </script>
+  <script>
+    function showDialog1() {
+      const dialog = document.getElementById('dialog');
+      if (dialog) {
+        dialog.visible = true;
+      }
+    }
+    function onClick(btn) {
+      Array.from(btn.parentNode.children).forEach(element => {
+        element.type = '';
+      });
+      btn.type = 'filled';
+      if (btn.dataset.target) {
+        const dialog = document.getElementById('dialog');
+        if (dialog) {
+          dialog.portal = btn.dataset.target;
+        }
+      }
+    }
+    function showDialog2() {
+      const dialog = document.getElementById('dialog2');
+      if (dialog) {
+        dialog.canceltext = 'Cancel';
+        dialog.oktext = null;
+        dialog.visible = true;
+      }
+    }
+    function onClick2(btn) {
+      Array.from(btn.parentNode.children).forEach(element => {
+        element.type = '';
+      });
+      btn.type = 'filled';
+      if (btn.dataset.target) {
+        const dialog = document.getElementById('dialog2');
+        if (dialog) {
+          dialog.portal = btn.dataset.target;
+        }
+      }
+    }
+
+    function showDialog3() {
+      WcDialog.error('我是通过WcDialog.error调用的。');
+    }
+  </script>
 </body>
+
 </html>
