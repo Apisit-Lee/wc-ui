@@ -9,3 +9,4 @@
     * [icon-source](/zh-cn/icon-source)
     * [text](/zh-cn/text)
     * [button](/zh-cn/button)
+    * [dialog](/zh-cn/dialog)

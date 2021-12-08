@@ -9,3 +9,4 @@
     * [icon-source](/icon-source)
     * [text](/text)
     * [button](/button)
+    * [dialog](/dialog)
