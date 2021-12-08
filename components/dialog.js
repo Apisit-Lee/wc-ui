@@ -48,6 +48,7 @@ export default class WcDialog extends HTMLElement {
             overflow: hidden;
             display: flex;
             flex-direction: column;
+            background: #ffffff;
           }
           :host([fullscreen]) .dialog-wrap {
             width: 100vw;
