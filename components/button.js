@@ -50,6 +50,7 @@ export default class WcButton extends HTMLElement {
             padding: var(--btn-padding, 0 24px);
             position: relative;
             overflow: hidden;
+            white-space: nowrap;
           }
           #btn {
             width: 100%;
