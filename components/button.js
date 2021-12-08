@@ -293,6 +293,7 @@ export class WcButtonGroup extends HTMLElement {
             display: inline-flex;
             gap: 0;
             font-size: 0!important;
+            width: fit-content;
           }
 
           ::slotted(wc-button) {
